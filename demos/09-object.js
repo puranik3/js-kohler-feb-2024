@@ -12,7 +12,7 @@ const john = {
     dependents: [
         {
             name: 'Jack',
-            age: 7
+            age: 7,
         },
         {
             name: 'Jill',
