@@ -33,7 +33,8 @@ const jonathan = {
         this.address.city = city;
         this.address.pinCode = pinCode;
     },
-    addEmail: function( email ) {
+    // addEmail: function( email ) {
+    addEmail( email ) { // new syntax for methods introduced in ES2015
         this.emails.push( email );
     }
 };

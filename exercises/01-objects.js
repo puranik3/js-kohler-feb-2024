@@ -18,5 +18,15 @@ const sholay = {
     name: 'Sholay',
     cast: [ 'Amitabh', 'Hema', 'Dharmendra', 'Jaya' ],
     yearOfRelease: 1975,
-    boxOfficeCollection: '2 crore'
+    boxOfficeCollection: 20000000,
+    addToCast: function( newMember ) {
+        this.cast.push( newMember );
+    },
+    addToCollection( amount ) {
+        this.boxOfficeCollection += amount;
+    }
 };
+
+sholay.addToCast( 'Sanjeev' );
+sholay.addToCollection( 5000000 );
+console.log( sholay );

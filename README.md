@@ -2,6 +2,12 @@
 - Feb 8 - Feb 20 (all weekdays except Feb 14)
 - 9:00 AM - 12:00 PM IST
 
+## Take-home exercises
+- Lab guide 1
+    - Functions (1 - 7)
+    - Object (1 - 4)
+    - Conditional and loops (1 - 11)
+
 ## Quizzes
 Enroll in the classroom at https://quik-quiz.onrender.com/ to take quizzes
 
