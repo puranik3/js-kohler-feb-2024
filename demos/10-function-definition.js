@@ -7,7 +7,8 @@ function sum1( x, y ) {
     return result;
 }
 
-console.log( sum2( 12, 13 ) );
+// uncomment to see the error
+// console.log( sum2( 12, 13 ) ); // error
 
 // function expression syntax (created when the code actually runs)
 const sum2 = function( x, y ) {
