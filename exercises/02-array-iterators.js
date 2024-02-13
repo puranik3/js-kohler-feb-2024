@@ -41,7 +41,19 @@ const persons = [
 ]; 
  
 // • Find all persons whose are 35 years or older 
-
-// • Find a person who has at least 3 email ids 
-
+const personage = persons.filter(function( employee ) {
+    return employee.age >= 35;
+});
+console.log( 'age = ', personage );
+ 
+// • Find a person who has at least 3 email ids
+const threeEmailsPerson = persons.find(function( employee ) {
+    return employee.emails.length >= 3;
+});
+console.log( threeEmailsPerson );
+ 
 // • Generate an array of all the names of persons
+const personNames = persons.map(function( employee ) {
+    return employee.name;
+});
+console.log( personNames );
