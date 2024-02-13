@@ -49,3 +49,4 @@ prices.sort(function( x, y ) {
 console.log( prices );
 
 // includes()
+console.log( prices.includes( 90 ) ); // true
