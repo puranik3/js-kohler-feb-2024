@@ -9,4 +9,7 @@ function sum( x, y, callback ) {
 
 sum( 12, 13, function( result1 ) {
     console.log( 'result1 = ', result1 );
+
+    // Use sum() to find the sum of result1 and 14, and log it
+    // your code...
 });
