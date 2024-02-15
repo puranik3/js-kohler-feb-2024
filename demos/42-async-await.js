@@ -1,10 +1,6 @@
-// ES2015 introduced the Promise class
 function sum( x, y ) {
     return new Promise(
         function( resolve, reject ) { // f
-            // console.log( 'inside f' );
-            // console.log( resolve, reject );
-
             setTimeout(
                 function() {
                     if( typeof x !== 'number' || typeof y !== 'number' ) {
@@ -13,7 +9,6 @@ function sum( x, y ) {
                     }
 
                     resolve( x + y );
-                    // callback( x + y );
                 },
                 3000
             );
@@ -21,21 +16,17 @@ function sum( x, y ) {
     );
 }
 
-// there are 2 important methods of promises - then(), catch()
-sum( 12, 'hello' )
-    .then(function( result1 ) {
+async function calculateSums() {
+    try {
+        const result1 = await sum( 12, 13 );
         console.log( 'result1 = ', result1 );
-
-        return sum( result1, 14 );
-    })
-    .then(function( result2 ) {
+        const result2 = await sum( result1, 'hello' );
         console.log( 'result2 = ', result2 );
-
-        return sum( result2, 15 );
-    })
-    .then(function( result3 ) {
+        const result3 = await sum( result2, 15 );
         console.log( 'result3 = ', result3 );
-    })
-    .catch(function( error ) {
+    } catch( error ) {
         console.log( error.message );
-    });
+    }
+}
+
+calculateSums();
