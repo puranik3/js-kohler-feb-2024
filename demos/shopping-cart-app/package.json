@@ -1,0 +1,16 @@
+{
+  "name": "shopping-cart-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c-1 ./src -p 4000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
