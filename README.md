@@ -9,6 +9,11 @@
     - Conditional and loops (1 - 11)
 - Lab guide 1 (Feb 12)
     - Built-in class - Strings and Arrays (1)
+- Lab Guide 2 (Feb 16)
+    - Fetch API and async..await - 14, 16
+    - Arrays - Q.4 - array iterator methods
+    - Ajax - Q.1
+
 
 ## Quizzes
 Enroll in the classroom at https://quik-quiz.onrender.com/ to take quizzes
