@@ -14,10 +14,28 @@ const renderStaticHtml = ( root ) => {
             </div>
         </main>
     </div>`;
+
+    // const productsWrapper = root.querySelector( 'main > div > section:first-child' )
+    const productsWrapper = root.querySelector( '#products-wrapper' );
+    const cartWrapper = root.querySelector( '#cart-wrapper' );
+
+    return {
+        // productsWrapper: productsWrapper,
+        // cartWrapper: cartWrapper
+        productsWrapper,
+        cartWrapper
+    };
+
 };
 
 const render = ( root ) => {
-    renderStaticHtml( root );
+    const { // destructuring to get convenient variables from the returned object
+        productsWrapper,
+        cartWrapper
+    } = renderStaticHtml( root );
+
+    console.log( productsWrapper );
+    console.log( cartWrapper );
 };
 
 // multiple ways to select elements
