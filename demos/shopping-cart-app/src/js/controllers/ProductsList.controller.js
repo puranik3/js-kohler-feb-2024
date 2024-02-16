@@ -1,11 +1,30 @@
 import { getProducts } from '../services/api/products.service.js';
 
 const renderStaticHtml = ( container ) => {
-    container.innerHTML = 'Products List';
+    container.innerHTML = `
+        <h2 class="visually-hidden">List of products</h2>
+        <div class="row" id="products-list"></div>
+    `;
+
+    const productsListEl = container.querySelector( '#products-list' );
+
+    return {
+        productsListEl
+    };
 };
 
 const renderItem = ( container, product ) => {
-    container.innerHTML = product.Name;
+    container.innerHTML = container.innerHTML + `
+        <div class="card w-100">
+            <img src="${product['Thumbnail URL']}" class="card-img-top" alt="${product.Name}">
+            <div class="card-body">
+                <h3 class="card-title fs-5">${product.Name}</h3>
+                <p class="card-text">${product.Description}</p>
+                <p>Price: <span class="fw-bold">$${product['Retail Price']}</span></p>
+                <a href="#" class="btn btn-primary btn-sm btn-add-to-cart">Add to cart</a>
+            </div>
+        </div>
+    `;
 }
 
 // arrow function does not require () around a single argument
@@ -14,8 +33,8 @@ export const render = async container => {
         // cal getProducts()
         const products = await getProducts();
 
-        renderStaticHtml( container );
-        renderItem( container, products[0] );
+        const { productsListEl } = renderStaticHtml( container );
+        products.forEach( product => renderItem( productsListEl, product ) );
     } catch( error ) {
         alert( error.message );
     }
