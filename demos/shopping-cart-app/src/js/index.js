@@ -1,6 +1,8 @@
+import * as ProductsListCtrl from './controllers/ProductsList.controller.js';
+
 const renderStaticHtml = ( root ) => {
     root.innerHTML = `<div class="container">
-        <header class="my-4">
+    <header class="my-4">
             <h1 class="my-1">
                 Mantra
             </h1>
@@ -36,6 +38,8 @@ const render = ( root ) => {
 
     console.log( productsWrapper );
     console.log( cartWrapper );
+
+    ProductsListCtrl.render( productsWrapper );
 };
 
 // multiple ways to select elements
