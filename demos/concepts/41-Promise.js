@@ -26,7 +26,7 @@ sum( 12, 'hello' )
     .then(function( result1 ) {
         console.log( 'result1 = ', result1 );
 
-        return sum( result1, 14 );
+        return sum( result1, 14 )
     })
     .then(function( result2 ) {
         console.log( 'result2 = ', result2 );

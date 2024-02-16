@@ -1,0 +1,13 @@
+<h2 class="visually-hidden">List of products</h2>
+<div class="row" id="products-list"></div>
+
+
+<div class="card w-100">
+    <img src="${product['Thumbnail URL']}" class="card-img-top" alt="${product.name}">
+    <div class="card-body">
+        <h3 class="card-title fs-5">${product['Name']}</h3>
+        <p class="card-text">${product['Description']}</p>
+        <p>Price: <span class="fw-bold">$${roundPrice( product['Retail Price'] )}</span></p>
+        <a href="#" class="btn btn-primary btn-sm btn-add-to-cart">Add to cart</a>
+    </div>
+</div>
