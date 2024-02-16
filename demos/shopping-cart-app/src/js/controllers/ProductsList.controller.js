@@ -1,4 +1,5 @@
 import { getProducts } from '../services/api/products.service.js';
+import { formatPrice } from '../services/utils.js';
 
 const renderStaticHtml = ( container ) => {
     container.innerHTML = `
@@ -21,7 +22,7 @@ const renderItem = ( container, product ) => {
                 <div class="card-body">
                     <h3 class="card-title fs-5">${product.Name}</h3>
                     <p class="card-text">${product.Description}</p>
-                    <p>Price: <span class="fw-bold">$${product['Retail Price']}</span></p>
+                    <p>Price: <span class="fw-bold">$${formatPrice(product['Retail Price'])}</span></p>
                     <a href="#" class="btn btn-primary btn-sm btn-add-to-cart">Add to cart</a>
                 </div>
             </div>
