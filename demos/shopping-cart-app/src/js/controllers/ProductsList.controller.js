@@ -1,5 +1,6 @@
 import { getProducts } from '../services/api/products.service.js';
 import { formatPrice } from '../services/utils.js';
+import * as Cart from '../models/Cart.js';
 
 const renderStaticHtml = ( container ) => {
     container.innerHTML = `
@@ -16,7 +17,9 @@ const renderStaticHtml = ( container ) => {
 
 const bindListeners = ( productEl, product ) => {
     productEl.querySelector( '.btn-add-to-cart' ).addEventListener( 'click', function() {
-        alert( 'button is clicked' );
+        // alert( 'button is clicked' );
+        Cart.add( product );
+        Cart.show();
     });
 }
 
