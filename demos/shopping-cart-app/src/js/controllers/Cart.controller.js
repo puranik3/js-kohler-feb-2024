@@ -31,11 +31,11 @@ const renderStaticHtml = container => {
     `;
 
     return {
-        cartItemEl: container.querySelector( '#cart-items' );
+        cartItemEl: container.querySelector( '#cart-items' )
     };
 };
 
 export const render = container => {
     const { cartItemsEl } = renderStaticHtml( container );
-    
+
 };
