@@ -36,8 +36,8 @@ const render = ( root ) => {
         cartWrapper
     } = renderStaticHtml( root );
 
-    console.log( productsWrapper );
-    console.log( cartWrapper );
+    // console.log( productsWrapper );
+    // console.log( cartWrapper );
 
     ProductsListCtrl.render( productsWrapper );
 };

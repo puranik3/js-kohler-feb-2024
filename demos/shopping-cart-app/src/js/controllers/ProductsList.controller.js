@@ -14,20 +14,30 @@ const renderStaticHtml = ( container ) => {
     };
 };
 
+const bindListeners = ( productEl, product ) => {
+    productEl.querySelector( '.btn-add-to-cart' ).addEventListener( 'click', function() {
+        alert( 'button is clicked' );
+    });
+}
+
 const renderItem = ( container, product ) => {
-    container.innerHTML = container.innerHTML + `
-        <div class="col-12 col-md-6 col-lg-4 my-2 d-flex">
-            <div class="card w-100">
-                <img src="${product['Thumbnail URL']}" class="card-img-top" alt="${product.Name}">
-                <div class="card-body">
-                    <h3 class="card-title fs-5">${product.Name}</h3>
-                    <p class="card-text">${product.Description}</p>
-                    <p>Price: <span class="fw-bold">$${formatPrice(product['Retail Price'])}</span></p>
-                    <a href="#" class="btn btn-primary btn-sm btn-add-to-cart">Add to cart</a>
-                </div>
+    const productEl = document.createElement( 'div' );
+    productEl.className = "col-12 col-md-6 col-lg-4 my-2 d-flex";
+
+    productEl.innerHTML = `
+        <div class="card w-100">
+            <img src="${product['Thumbnail URL']}" class="card-img-top" alt="${product.Name}">
+            <div class="card-body">
+                <h3 class="card-title fs-5">${product.Name}</h3>
+                <p class="card-text">${product.Description}</p>
+                <p>Price: <span class="fw-bold">$${formatPrice(product['Retail Price'])}</span></p>
+                <a href="#" class="btn btn-primary btn-sm btn-add-to-cart">Add to cart</a>
             </div>
         </div>
     `;
+
+    container.appendChild( productEl );
+    bindListeners( productEl, product );
 }
 
 // arrow function does not require () around a single argument
