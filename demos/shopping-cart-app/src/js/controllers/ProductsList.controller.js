@@ -1,6 +1,7 @@
 import { getProducts } from '../services/api/products.service.js';
 import { formatPrice } from '../services/utils.js';
 import * as Cart from '../models/Cart.js';
+import * as CartCtrl from './Cart.controller.js';
 
 const renderStaticHtml = ( container ) => {
     container.innerHTML = `
@@ -19,7 +20,8 @@ const bindListeners = ( productEl, product ) => {
     productEl.querySelector( '.btn-add-to-cart' ).addEventListener( 'click', function() {
         // alert( 'button is clicked' );
         Cart.add( product );
-        Cart.show();
+        // Cart.show();
+        CartCtrl.render( document.getElementById( 'cart-wrapper' ) );
     });
 }
 

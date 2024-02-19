@@ -27,6 +27,19 @@ export const add = product => {
     }
 };
 
+// spread operator (...) can be used to create a copy of an array
+export const getItems = () => [ ...cartItems ];
+
+export const getTotal = () => {
+    let total = 0;
+    
+    cartItems.forEach( cartItem => {
+        total += cartItem.getTotal();
+    });
+    
+    return total;
+};
+
 export const isEmpty = () => {
     return cartItems.length === 0;
 };
