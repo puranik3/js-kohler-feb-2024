@@ -15,7 +15,9 @@ const cartItems = [
 ];
 
 export const add = product => {
-    const match = cartItems.find( cartItem => cartItem.product.SKU === product.SKU );
+    const match = cartItems.find(
+        cartItem => cartItem.product.SKU === product.SKU
+    );
 
     // if( match !== null )
     if( match ) {
@@ -23,6 +25,10 @@ export const add = product => {
     } else {
         cartItems.push( new CartItem( product, 1 ) );
     }
+};
+
+export const isEmpty = () => {
+    return cartItems.length === 0;
 };
 
 export const show = () => {
