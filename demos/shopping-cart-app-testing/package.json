@@ -1,0 +1,39 @@
+{
+  "name": "jest-intro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/index.js",
+  "scripts": {
+    "start": "http-server -c-1 --port 3000",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:e2e:browser": "cypress open",
+    "test:e2e:cmd": "cypress run"
+  },
+  "keywords": [],
+  "author": "Prashanth Puranik",
+  "email": "puranik@digdeeper.in",
+  "url": "https://digdeeper.in",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.23.9",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-transform-regenerator": "^7.23.3",
+    "@babel/plugin-transform-runtime": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "@testing-library/dom": "^9.3.4",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@types/jest": "^29.5.12",
+    "babel-jest": "^29.7.0",
+    "babel-plugin-rewire": "^1.2.0",
+    "cypress": "^13.6.4",
+    "http-server": "^14.1.1",
+    "jest": "^28.1.3",
+    "jest-environment-jsdom": "^29.7.0",
+    "whatwg-fetch": "^3.6.20"
+  },
+  "dependencies": {
+    "msw": "^1.3.2"
+  }
+}
